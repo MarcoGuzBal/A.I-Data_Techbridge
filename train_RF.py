@@ -180,8 +180,8 @@ def evaluate_regression_model(model, X_test, y_test, visualize=True):
             plt.title('Q-Q Plot of Errors')
         
         plt.tight_layout()
-        plt.savefig('rf_regression_evaluation.png')
-        print("\nEvaluation plots saved to 'rf_regression_evaluation.png'")
+        plt.savefig('plots/rf_regression_evaluation.png')
+        print("\nEvaluation plots saved to 'plots/rf_regression_evaluation.png'")
     
     return {
         'mse': mse,
@@ -207,11 +207,11 @@ def main():
     parser.add_argument('--max_depth', type=int, default=None, help="Maximum depth of trees.")
     parser.add_argument('--min_samples_split', type=int, default=2, help="Minimum samples to split a node.")
     parser.add_argument('--min_samples_leaf', type=int, default=1, help="Minimum samples in a leaf node.")
-    parser.add_argument('--model_filename', type=str, default='rf_regression_model.pkl', 
+    parser.add_argument('--model_filename', type=str, default='models/rf_regression_model.pkl', 
                         help="Filename for saving the trained model.")
-    parser.add_argument('--scaler_filename', type=str, default='scaler.pkl', 
+    parser.add_argument('--scaler_filename', type=str, default='models/scaler.pkl', 
                         help="Filename for saving the feature scaler.")
-    parser.add_argument('--selector_filename', type=str, default='selector.pkl', 
+    parser.add_argument('--selector_filename', type=str, default='models/selector.pkl', 
                         help="Filename for saving the feature selector.")
     parser.add_argument('--n_features', type=int, default=10, help="Number of features to select.")
     parser.add_argument('--verbose', type=int, default=1, help="Verbosity level (0=silent, 1=progress).")

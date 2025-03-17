@@ -127,7 +127,7 @@ def evaluate_regression_model(model, X_test, y_test, visualize=True):
         
         plt.tight_layout()
         plt.savefig('regression_evaluation.png')
-        print("\nEvaluation plots saved to 'regression_evaluation.png'")
+        print("\nEvaluation plots saved to 'plots/regression_evaluation.png'")
     
     return {
         'mse': mse,
